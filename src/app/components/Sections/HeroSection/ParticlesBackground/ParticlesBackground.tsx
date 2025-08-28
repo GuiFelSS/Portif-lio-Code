@@ -3,8 +3,6 @@
 import { useEffect } from 'react';
 
 
-// Declaração global para evitar conflito de modificadores:
-declare let particlesJS: (tagId: string, params: object, callback?: () => void) => void;
 
 export default function ParticlesBackground() {
   useEffect(() => {
@@ -42,6 +40,7 @@ export default function ParticlesBackground() {
   }, []);
 
   const initParticles = () => {
+    if (!window.particlesJS) return;
     window.particlesJS("particles-js", {
       "particles": {
         "number": {

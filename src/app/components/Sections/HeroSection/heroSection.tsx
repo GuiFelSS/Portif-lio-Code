@@ -2,6 +2,7 @@
 
 "use client";
 import { TypeAnimation } from 'react-type-animation'; 
+import Image from 'next/image';
 import styles from './heroSection.module.css';
 import ParticlesBackground from './ParticlesBackground/ParticlesBackground';
 
@@ -19,9 +20,11 @@ export default function HeroSection() {
             <div className={styles.heroContent}>
                 {/* Container da Imagem - Lado Esquerdo */}
                 <div className={styles.imageContainer}>
-                    <img
+                    <Image
                         src="/foto_perfil_teste.jpg"
                         alt="Foto de perfil - Guilherme Felipe"
+                        width={150}
+                        height={150}
                         className={styles.profileImage}
                     />
                 </div>
