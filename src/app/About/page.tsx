@@ -1,5 +1,7 @@
 // PÁGINA ABOUT - Rota: /About
 import styles from './page.module.css'; // Corrigi o caminho do CSS
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutPage() {
     return (
@@ -7,9 +9,11 @@ export default function AboutPage() {
             <header className={styles.headerAbout}>
 
                 <div className={styles.profileImageContainer}>
-                    <img
+                    <Image
                         src="/foto_perfil_teste.jpg"
                         alt="Foto de perfil - Guilherme Felipe"
+                        width={150}
+                        height={150}
                         className={styles.profileImage}
                     />
                     <h2>GUIFELSS</h2>
@@ -18,7 +22,7 @@ export default function AboutPage() {
 
                 <nav className={styles.navAbout}>
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><Link href="/">Home</Link></li>
                     </ul>
 
                     <ul>

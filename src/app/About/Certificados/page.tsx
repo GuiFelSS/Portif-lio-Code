@@ -1,5 +1,7 @@
 // PÁGINA CERTIFICADOS - Rota: /About/Certificados
 import styles from './page.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface Certificados {
     id: number;
@@ -77,9 +79,11 @@ export default function CertificadosPage() {
         <main className={styles.mainCertificados}>
             <header className={styles.headerCertificados}>
                 <div className={styles.profileImageContainer}>
-                    <img
+                    <Image
                         src="/foto_perfil_teste.jpg"
                         alt="Foto de perfil - Guilherme Felipe"
+                        width={150}
+                        height={150}
                         className={styles.profileImage}
                     />
                     <h2>GUIFELSS</h2>
@@ -88,7 +92,7 @@ export default function CertificadosPage() {
 
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><Link href="/">Home</Link></li>
                     </ul>
 
                     <ul>
@@ -128,9 +132,11 @@ export default function CertificadosPage() {
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                     >
-                                        <img 
+                                        <Image 
                                             src={certificado.image} 
                                             alt={certificado.title}
+                                            width={300}
+                                            height={200}
                                             className={styles.certificadoImage}
                                         />
                                     </a>
