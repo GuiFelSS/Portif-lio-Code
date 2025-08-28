@@ -1,7 +1,6 @@
-// PÁGINA Projects - Rota: /Projects
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './page.module.css'; // Corrigi o caminho do CSS
+import styles from './page.module.css';
 
 export default function ProjectsPage() {
     return (

@@ -1,5 +1,4 @@
-// PÁGINA Projects - Rota: /Projects
-import styles from './page.module.css'; // Corrigi o caminho do CSS
+import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -26,7 +25,7 @@ export default function ProjectsPage() {
                     </ul>
 
                     <ul>
-                        <li><a href="#" target='_blank'>GitHub</a></li>
+                        <li><a href="https://github.com/GuiFelSS/Web_Portifolio" target='_blank'>GitHub</a></li>
                     </ul>
 
                     <div className={styles.socialIconsContainer}>

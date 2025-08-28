@@ -1,9 +1,7 @@
 .technologiesSection {
   width: 100%;
   padding: 20px 0;
-  /* Um pouco de espaço vertical */
   text-align: center;
-  /* background-color: #1A1A1A; */
 }
 
 .technologiesSection h2 {
@@ -20,14 +18,13 @@
   /* Necessário para a máscara de gradiente */
   display: flex;
   align-items: center;
-  /* background-color: #1A1A1A; */
 
-  /* DICA PRO: Cria um efeito de "fade-out" nas laterais */
+  /*Cria um efeito de "fade-out" nas laterais */
   -webkit-mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
 }
 
-/* Quando o usuário passar o mouse, a animação pausa. Ótimo para UX! */
+/* Quando o usuário passar o mouse, a animação pausa.*/
 .sliderContainer:hover .sliderTrack {
   animation-play-state: paused;
 }
@@ -49,14 +46,12 @@
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-  /* Espaçamento entre os logos */
 }
 
 .logo img {
   max-width: 100%;
   max-height: 100%;
   filter: grayscale(1);
-  /* Deixa em escala de cinza para um visual clean */
   transition: filter 0.3s ease;
 }
 
@@ -96,7 +91,6 @@
   margin: 40px auto;
 }
 
-/* Bottom and top glow effects - moved to container level */
 .tecnologiesButtons a {
   position: relative;
   top: 0;
@@ -110,7 +104,6 @@
   text-decoration: none;
 }
 
-/* Glow effects on the anchor element */
 .tecnologiesButtons a::before {
   content: "";
   position: absolute;
@@ -176,7 +169,6 @@
   transition: 0.2s;
   backdrop-filter: blur(15px);
 
-  /* Add background image for icons */
   background-image: var(--cssTechnology-image);
   background-size: 30px 30px;
   background-position: center;
@@ -236,7 +228,7 @@
   background-image: var(--dotnetTechnology-image);
 }
 
-/* Hover effects for button text */
+/* Hover effects */
 .tecnologiesButtons a:hover .cssTechnology,
 .tecnologiesButtons a:hover .githubTechnology,
 .tecnologiesButtons a:hover .htmlTechnology,
@@ -254,7 +246,6 @@
   letter-spacing: 3px;
 }
 
-/* Before pseudo-element for shine effect */
 .cssTechnology::before,
 .githubTechnology::before,
 .htmlTechnology::before,
@@ -299,7 +290,7 @@
   transform: skewX(45deg) translate(200px);
 }
 
-/* Hover effects for glow */
+/* Hover effects para brilho*/
 .tecnologiesButtons a:hover::before {
   bottom: 0;
   height: 50%;
@@ -314,7 +305,7 @@
   border-radius: 30px;
 }
 
-/* Individual color schemes for each technology using nth-child */
+/* Individual color */
 .tecnologiesButtons a:nth-child(1)::before,
 .tecnologiesButtons a:nth-child(1)::after {
   background: #1572B6;

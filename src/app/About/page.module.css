@@ -73,7 +73,6 @@
   color: #fff;
 }
 
-/* Estilos para os ícones sociais */
 .socialIconsContainer {
   display: flex;
   gap: 20px;
@@ -125,7 +124,6 @@
 
 .contentArea {
   margin-left: 350px;
-  /* Espaço para a barra lateral */
   padding: 60px 80px;
   min-height: 100vh;
   overflow-y: auto;

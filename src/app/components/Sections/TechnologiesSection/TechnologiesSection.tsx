@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from './technologiesSection.module.css';
 
-// 1. Defina seus logos em um array de objetos. Fácil de adicionar ou remover!
 const logos = [
   { src: '/icons_logos/css3-original.svg', alt: 'CSS3', className: 'cssTechnology', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
   { src: '/icons_logos/github-original.svg', alt: 'GitHub', className: 'githubTechnology', url: 'https://docs.github.com/pt/get-started/start-your-journey/about-github-and-git' },
@@ -20,7 +19,7 @@ const logos = [
 ];
 
 export default function TechnologiesSection() {
-  // Criando as CSS custom properties para cada tecnologia
+  //Criando as CSS custom properties para cada tecnologia
   const cssVariables = logos.reduce<Record<string, string>>((acc, logo) => {
     acc[`--${logo.className}-image`] = `url('${logo.src}')`;
     return acc;

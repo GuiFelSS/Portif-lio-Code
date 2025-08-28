@@ -1,5 +1,4 @@
-// PÁGINA Projects - Rota: /Projects
-import styles from './page.module.css'; // Corrigi o caminho do CSS
+import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 

@@ -1,5 +1,5 @@
-// PÁGINA ABOUT - Rota: /About
-import styles from './page.module.css'; // Corrigi o caminho do CSS
+
+import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,7 +31,7 @@ export default function AboutPage() {
 
                     <ul>
                         <li>
-                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer">
+                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV_Portifolio.pdf" target="_blank" rel="noopener noreferrer">
                                 Meu CV
                             </a>
                         </li>

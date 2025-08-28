@@ -24,7 +24,7 @@ const projects: Project[] = [
     id: 1,
     title: "Alagaqui",
     description: "Um sistema inteligente que une a colaboração dos cidadãos e a tecnologia IoT para mapear alagamentos em São Paulo em tempo real. Descubra como transformamos dados em segurança urbana.",
-    image: "/project_imgs/Alagaqui/Alagaqui-logo.jpg", // Placeholder - você pode substituir pela imagem real
+    image: "/project_imgs/Alagaqui/Alagaqui-logo.jpg",
     technologies: ["React Native", "Java", "SQL", "JavaScript", "Spring Boot", "GitHub", "Docker", "Linux", "C#", ".NET"],
     liveLink: "https://github.com/GuiFelSS/Alagaqui",
     githubLink: "https://github.com/GuiFelSS/Alagaqui",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     id: 3,
     title: "Eficientiza",
     description: "Um projeto em andamento em parceria com a Mottu para resolver um desafio de escala. Desenvolvendo uma solução com Visão Computacional e IoT para o mapeamento em tempo real de milhares de motos para uma das startups que mais crescem na América Latina.",
-    image: "/project_imgs/Eficientiza/eficientiza-logo.png", // Placeholder - você pode substituir pela imagem real
+    image: "/project_imgs/Eficientiza/eficientiza-logo.png",
     technologies: ["React Native", "Java", "SQL", "JavaScript", "Spring Boot", "GitHub", "Docker", "Linux", "C#", ".NET"],
     githubLink: "https://github.com/GuiFelSS/Eficientiza",
     VerMais: "/Projects/Eficientiza"
@@ -53,9 +53,9 @@ const projects: Project[] = [
     id: 4,
     title: "Meu Portfólio",
     description: "Este é meu portifólio, desenvolvido com Next.js, apresentando alguns dos meus projetos desenvolvidos sozinho e em grupo durante minha jornada de aprendizado em busca por oportunidades na área de desenvolvimento (por favor me de essa oportunidade 🙏 kkkk) fique à vontade para explorar e conhecer mais sobre meu trabalho e habilidades, espero que goste e desde já agradeço pela atenção.",
-    image: "/project_imgs/p_portifolio/Portifolio.jpeg", // Placeholder - você pode substituir pela imagem real
+    image: "/project_imgs/P_portifolio/Portifolio.jpeg",
     technologies: ["Next.js", "GitHub"],
-    githubLink: "https://github.com/username/project4",
+    githubLink: "https://github.com/GuiFelSS/Web_Portifolio",
     VerMais: "/Projects/pro_portifolio"
   },
 ];
@@ -65,30 +65,29 @@ export default function ProjectsSection() {
   const [expandedDescriptions, setExpandedDescriptions] = useState<{ [key: number]: boolean }>({});
   const [expandedTechnologies, setExpandedTechnologies] = useState<{ [key: number]: boolean }>({});
   const [animatedProjects, setAnimatedProjects] = useState<Set<number>>(new Set());
-  
-  // Hook para animação da seção principal
+
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
   });
 
-  // 4 projetos por página (2x2)
+  //4 projetos por página (2x2)
   const projectsPerPage = 4;
   const totalSlides = Math.ceil(projects.length / projectsPerPage);
 
-  // Tamanho máximo da descrição antes de truncar
+  //Tamanho máximo da descrição antes de truncar
   const MAX_DESCRIPTION_LENGTH = 100;
-  // Número máximo de tecnologias a mostrar inicialmente
+  //Número máximo de tecnologias a mostrar inicialmente
   const MAX_TECHNOLOGIES_DISPLAYED = 3;
 
-  // Função para obter projetos por slide
+  //Função para obter projetos por slide
   const getProjectsForSlide = (slideIndex: number) => {
     const startIndex = slideIndex * projectsPerPage;
     const endIndex = startIndex + projectsPerPage;
     return projects.slice(startIndex, endIndex);
   };
 
-  // Animar projetos quando a seção ficar visível ou esconder quando sair
+  //Animar projetos quando a seção ficar visível ou esconder quando sair
   useEffect(() => {
     if (sectionVisible) {
       const currentProjects = getProjectsForSlide(currentIndex);
@@ -102,23 +101,23 @@ export default function ProjectsSection() {
 
       return () => clearTimeout(timer);
     } else {
-      // Remove todos os projetos animados quando a seção sai de vista
+      //Remove todos os projetos animados quando a seção sai de vista
       setAnimatedProjects(new Set());
     }
   }, [sectionVisible, currentIndex]);
 
-  // Animar novos projetos quando trocar de slide
+  //Animar novos projetos quando trocar de slide
   useEffect(() => {
     if (sectionVisible) {
       const currentProjects = getProjectsForSlide(currentIndex);
-      // Anima todos os projetos juntos
+      //Anima todos os projetos juntos
       setAnimatedProjects(prev => {
         const newSet = new Set(prev);
         currentProjects.forEach(project => newSet.add(project.id));
         return newSet;
       });
     } else {
-      // Remove animações quando não está visível
+      //Remove animações quando não está visível
       setAnimatedProjects(new Set());
     }
   }, [currentIndex, sectionVisible]);
@@ -164,7 +163,7 @@ export default function ProjectsSection() {
     return description.substring(0, maxLength).trim() + '... ';
   };
 
-  // Função para alternar expansão da descrição
+  //Função para alternar expansão da descrição
   const toggleDescription = (projectId: number) => {
     setExpandedDescriptions(prev => ({
       ...prev,
@@ -172,7 +171,7 @@ export default function ProjectsSection() {
     }));
   };
 
-  // Função para alternar expansão das tecnologias
+  //Função para alternar expansão das tecnologias
   const toggleTechnologies = (projectId: number) => {
     setExpandedTechnologies(prev => ({
       ...prev,
@@ -181,8 +180,8 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section 
-      id="projects" 
+    <section
+      id="projects"
       className={`${styles.projectsSection} ${sectionVisible ? styles.animate : ''}`}
       ref={sectionRef}
     >
@@ -196,16 +195,16 @@ export default function ProjectsSection() {
           {Array.from({ length: totalSlides }).map((_, slideIndex) => (
             <div key={slideIndex} className={styles.projectCard}>
               {getProjectsForSlide(slideIndex).map((project) => (
-                <div 
-                  key={project.id} 
+                <div
+                  key={project.id}
                   className={`${styles.projectItem} ${animatedProjects.has(project.id) ? styles.animate : ''} ${project.id >= 999 ? styles.placeholderProject : ''}`}
                 >
                   <div className={styles.projectImage}>
-                    <Image 
-                      src={project.image} 
-                      alt={project.title} 
-                      width={400} 
-                      height={150} 
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={400}
+                      height={150}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
@@ -240,8 +239,8 @@ export default function ProjectsSection() {
                     </div>
 
                     <div className={styles.projectTechnologies}>
-                      {(expandedTechnologies[project.id] 
-                        ? project.technologies 
+                      {(expandedTechnologies[project.id]
+                        ? project.technologies
                         : project.technologies.slice(0, MAX_TECHNOLOGIES_DISPLAYED)
                       ).map((tech, index) => (
                         <span
@@ -256,14 +255,14 @@ export default function ProjectsSection() {
                           className={styles.toggleButton}
                           onClick={() => toggleTechnologies(project.id)}
                         >
-                          {expandedTechnologies[project.id] 
+                          {expandedTechnologies[project.id]
                             ? `menos (${project.technologies.length - MAX_TECHNOLOGIES_DISPLAYED} ocultas)`
                             : `+${project.technologies.length - MAX_TECHNOLOGIES_DISPLAYED} mais`
                           }
                         </button>
                       )}
                     </div>
-                      
+
                     <div className={styles.projectLinks}>
                       {project.VerMais && (
                         <a
@@ -297,7 +296,7 @@ export default function ProjectsSection() {
                           Ver Projeto
                         </a>
                       )}
-                      
+
                     </div>
                   </div>
                 </div>

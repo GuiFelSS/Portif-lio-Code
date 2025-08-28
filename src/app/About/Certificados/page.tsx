@@ -1,4 +1,3 @@
-// PÁGINA CERTIFICADOS - Rota: /About/Certificados
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,8 +13,8 @@ const certificados: Certificados[] = [
     {
         id: 1,
         title: 'Qualificação Profissional em Análise de Sistemas e Prototipação Web',
-        image: '/certificados/IMAGENs/Fiap-certificado-1.png', // Imagem do certificado
-        link: '/certificados/PDFs/FIAP-certificado-1.pdf'   // PDF para download
+        image: '/certificados/IMAGENs/Fiap-certificado-1.png', 
+        link: '/certificados/PDFs/FIAP-certificado-1.pdf'   
     },
 
     {
@@ -101,7 +100,7 @@ export default function CertificadosPage() {
 
                     <ul>
                         <li>
-                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer">
+                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV_Portifolio.pdf" target="_blank" rel="noopener noreferrer">
                                 Meu CV
                             </a>
                         </li>

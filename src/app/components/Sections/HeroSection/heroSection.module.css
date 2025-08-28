@@ -1,17 +1,13 @@
 .hero {
-    /* Faz a seção ocupar quase a tela toda na vertical */
     min-height: calc(100vh - 0px);
-    /* 100% da altura da tela menos a altura aproximada do header */
     width: 100%;
 
     /* Posição relativa para o background de partículas */
     position: relative;
     
-    /* Remove limitações de largura para o background ocupar toda a tela */
     max-width: none;
     margin: 0;
     
-    /* Container interno para o conteúdo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,8 +19,6 @@
     left: 40px;
     z-index: 1; /* Fica acima do background de partículas */
 }
-
-/* Novo container interno para limitar o conteúdo */
 .heroContent {
     /* Layout horizontal - imagem à esquerda, texto à direita */
     display: flex;
@@ -71,15 +65,12 @@
 
 .title {
     font-size: 3rem;
-    /* 48px */
     font-weight: 700;
     margin-bottom: 0.5rem;
-    /* 8px */
 }
 
 .destaque {
     color: #00FF00;
-    /* Cor azul de destaque */
 }
 
 .subtitle {
@@ -100,7 +91,7 @@
 .socialLinks {
     display: flex;
     gap: 2rem;
-    align-items: center; /* Alinha todos os itens no centro */
+    align-items: center;
 }
 
 .linkedinIcon {

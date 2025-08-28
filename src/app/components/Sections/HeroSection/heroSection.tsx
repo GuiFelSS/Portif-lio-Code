@@ -49,7 +49,6 @@ export default function HeroSection() {
                             wrapper="span"
                             speed={8}
                             repeat={Infinity}
-                            // Usando a sua classe de CSS já existente para o destaque!
                             className={styles.destaque} 
                         />
                     </h2>
@@ -72,7 +71,7 @@ export default function HeroSection() {
                                 Sobre
                         </a>
 
-                        <a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/Guilherme_Felipe_da_Silva_Souza_CV_Portifolio.pdf" target="_blank" rel="noopener noreferrer"
                             className={styles.CvButton}>
                                 Meu CV
                         </a>
