@@ -2,11 +2,9 @@
 
 import { useEffect } from 'react';
 
-declare global {
-  interface Window {
-    particlesJS: any;
-  }
-}
+
+// Declaração global para evitar conflito de modificadores:
+declare let particlesJS: (tagId: string, params: object, callback?: () => void) => void;
 
 export default function ParticlesBackground() {
   useEffect(() => {

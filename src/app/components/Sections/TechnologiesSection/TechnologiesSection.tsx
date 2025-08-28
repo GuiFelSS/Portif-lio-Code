@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './technologiesSection.module.css';
 
 // 1. Defina seus logos em um array de objetos. Fácil de adicionar ou remover!
@@ -20,10 +21,10 @@ const logos = [
 
 export default function TechnologiesSection() {
   // Criando as CSS custom properties para cada tecnologia
-  const cssVariables = logos.reduce((acc, logo) => {
-    (acc as any)[`--${logo.className}-image`] = `url('${logo.src}')`;
+  const cssVariables = logos.reduce<Record<string, string>>((acc, logo) => {
+    acc[`--${logo.className}-image`] = `url('${logo.src}')`;
     return acc;
-  }, {} as React.CSSProperties);
+  }, {});
   return (
     <section id="technologies" className={styles.technologiesSection} style={cssVariables}>
       <h2>TECNOLOGIAS</h2>
@@ -35,15 +36,15 @@ export default function TechnologiesSection() {
           
           {/* Renderiza a lista de logos a primeira vez */}
           {logos.map((logo, index) => (
-            <div className={styles.logo} key={`logo1-${index}`}>
-              <img src={logo.src} alt={logo.alt} />
+            <div className={styles.logo} key={`logo1-${index}`} style={{ position: 'relative' }}>
+              <Image src={logo.src} alt={logo.alt} fill style={{ objectFit: 'contain' }} />
             </div>
           ))}
 
           {/* Renderiza a mesma lista de logos uma segunda vez para o efeito infinito */}
           {logos.map((logo, index) => (
-            <div className={styles.logo} key={`logo2-${index}`}>
-              <img src={logo.src} alt={logo.alt} />
+            <div className={styles.logo} key={`logo2-${index}`} style={{ position: 'relative' }}>
+              <Image src={logo.src} alt={logo.alt} fill style={{ objectFit: 'contain' }} />
             </div>
           ))}
 

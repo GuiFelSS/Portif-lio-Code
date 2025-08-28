@@ -1,5 +1,8 @@
 
+
 'use client';
+
+import Image from 'next/image';
 
 import { useState, useEffect } from 'react';
 import styles from './projectSection.module.css';
@@ -50,7 +53,7 @@ const projects: Project[] = [
     id: 4,
     title: "Meu Portfólio",
     description: "Este é meu portifólio, desenvolvido com Next.js, apresentando alguns dos meus projetos desenvolvidos sozinho e em grupo durante minha jornada de aprendizado em busca por oportunidades na área de desenvolvimento (por favor me de essa oportunidade 🙏 kkkk) fique à vontade para explorar e conhecer mais sobre meu trabalho e habilidades, espero que goste e desde já agradeço pela atenção.",
-    image: "/project_imgs/p_portifolio//Portifolio.jpeg", // Placeholder - você pode substituir pela imagem real
+    image: "/project_imgs/p_portifolio/Portifolio.jpeg", // Placeholder - você pode substituir pela imagem real
     technologies: ["Next.js", "GitHub"],
     githubLink: "https://github.com/username/project4",
     VerMais: "/Projects/pro_portifolio"
@@ -198,7 +201,13 @@ export default function ProjectsSection() {
                   className={`${styles.projectItem} ${animatedProjects.has(project.id) ? styles.animate : ''} ${project.id >= 999 ? styles.placeholderProject : ''}`}
                 >
                   <div className={styles.projectImage}>
-                    <img src={project.image} alt={project.title} />
+                    <Image 
+                      src={project.image} 
+                      alt={project.title} 
+                      width={400} 
+                      height={150} 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
                   </div>
 
                   <div className={styles.projectContent}>
