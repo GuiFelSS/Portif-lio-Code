@@ -1,4 +1,6 @@
 // PÁGINA Projects - Rota: /Projects
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from './page.module.css'; // Corrigi o caminho do CSS
 
 export default function ProjectsPage() {
@@ -7,9 +9,11 @@ export default function ProjectsPage() {
             <header className={styles.headerProjects}>
 
                 <div className={styles.profileImageContainer}>
-                    <img
+                    <Image
                         src="/foto_perfil_teste.jpg"
                         alt="Foto de perfil - Guilherme Felipe"
+                        width={150}
+                        height={150}
                         className={styles.profileImage}
                     />
                     <h2>GUIFELSS</h2>
@@ -18,7 +22,7 @@ export default function ProjectsPage() {
 
                 <nav className={styles.navProjects}>
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><Link href="/">Home</Link></li>
                     </ul>
 
                     <ul>

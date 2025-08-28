@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 declare global {
   interface Window {
-    particlesJS: any;
+    particlesJS?: (tagId: string, params: object, callback?: () => void) => void;
   }
 }
 
@@ -42,6 +42,7 @@ export default function ParticlesBackground() {
   }, []);
 
   const initParticles = () => {
+    if (!window.particlesJS) return;
     window.particlesJS("particles-js", {
       "particles": {
         "number": {
