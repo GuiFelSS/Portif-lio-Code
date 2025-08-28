@@ -1,0 +1,250 @@
+.hero {
+    /* Faz a seção ocupar quase a tela toda na vertical */
+    min-height: calc(100vh - 0px);
+    /* 100% da altura da tela menos a altura aproximada do header */
+    width: 100%;
+
+    /* Posição relativa para o background de partículas */
+    position: relative;
+    
+    /* Remove limitações de largura para o background ocupar toda a tela */
+    max-width: none;
+    margin: 0;
+    
+    /* Container interno para o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroHeader {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1; /* Fica acima do background de partículas */
+}
+
+/* Novo container interno para limitar o conteúdo */
+.heroContent {
+    /* Layout horizontal - imagem à esquerda, texto à direita */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    /* Espaçamento entre imagem e texto */
+
+    /* Espaçamento interno e limitação de largura só para o conteúdo */
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImage {
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0px 0px 400px 48px rgba(0, 248, 0), 0 10px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 400px;
+}
+
+.profileImage:hover {
+    transform: scale(1.05);
+}
+
+.textContent {
+    flex: 1;
+    text-align: left;
+}
+
+.title {
+    font-size: 3rem;
+    /* 48px */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    /* 8px */
+}
+
+.destaque {
+    color: #00FF00;
+    /* Cor azul de destaque */
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+.description {
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    /* 32px */
+}
+
+.socialLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center; /* Alinha todos os itens no centro */
+}
+
+.linkedinIcon {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+    background-color: transparent;
+    content: url('/icons_logos/linkedin-icon.svg');
+    margin-top: 2px;
+}
+
+.linkedinIcon:hover {
+    content: url('/icons_logos/linkedin-icon-white.svg');
+    transform: scale(1.2);
+    background-color: #00FF00;
+    box-shadow: 0 0 20px rgba(0, 255, 0);
+    border-radius: 50%;
+}
+
+.GithubIcon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+    background-color: transparent;
+    content: url('/icons_logos/github-icon.svg');
+}
+
+.GithubIcon:hover {
+    content: url('/icons_logos/github-icon-white.svg');
+    transform: scale(1.2);
+    background-color: #00FF00;
+    box-shadow: 0 0 20px rgba(0, 255, 0);
+    border-radius: 50%;
+}
+
+.CvButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.404);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 24px ; 
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    height: 40px;
+    margin-bottom: 2px;
+}
+
+.CvButton:hover {
+    background-color: #00FF00;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0px 20px rgba(0, 255, 0);
+    border: 2.8px solid rgba(0, 255, 0);
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .heroContent {
+    max-width: 100vw;
+    gap: 1.5rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px;
+    max-width: 100vw;
+  }
+
+  .textContent {
+    text-align: center;
+  }
+
+  .profileImage {
+    width: 280px;
+    height: 280px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroHeader {
+    top: 20px;
+    left: 20px;
+  }
+
+  .heroContent {
+    padding: 10px;
+    gap: 1rem;
+  }
+
+  .profileImage {
+    width: 220px;
+    height: 220px;
+    box-shadow: 0px 0px 200px 30px rgba(0, 248, 0), 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .socialLinks {
+    gap: 1.5rem;
+  }
+
+  .linkedinIcon,
+  .GithubIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .CvButton {
+    font-size: 20px;
+    height: 36px;
+  }
+}

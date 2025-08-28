@@ -1,0 +1,494 @@
+.projectsSection {
+  width: 100%;
+  padding: 60px 0;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.projectsSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectsSection h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, 
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.projectsSection.animate h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sliderContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.sliderWrapper {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.projectCard {
+  flex: 0 0 calc(100% - 30px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+
+.projectItem {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s ease, 
+              opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  will-change: transform, opacity;
+}
+
+.projectItem.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.projectImage {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projectContent {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.projectDescription {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.projectDescription p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline;
+  vertical-align: baseline;
+}
+
+.toggleButton:hover {
+  color: #66BB6A;
+  text-decoration: underline;
+}
+
+.projectTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.techTag {
+  position: relative;
+  padding: 4px 15px 4px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 0.78rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.techTag::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: var(--tech-color, #fff);
+}
+
+/* Cores específicas para cada tecnologia */
+.techReact::after {
+  background: #61DAFB;
+}
+
+.techNextjs::after,
+.techNext::after {
+  background: #000;
+}
+
+.techJavaScript::after {
+  background: #F7DF1E;
+}
+
+.techSpring::after,
+.techSpringBoot::after {
+  background: #6DB33F;
+}
+
+.techJava::after {
+  background: #ED8B00;
+}
+
+.techReactNative::after {
+  background: #61DAFB;
+}
+
+.techPython::after {
+  background: #3776AB;
+}
+
+.techOracleSQL::after {
+  background: #F80000;
+}
+
+.techDocker::after {
+  background: #2496ED;
+}
+
+.techHTML::after{
+  background: #E34F26;
+}
+
+.techCSS::after {
+  background: #1572B6;
+}
+
+.techGitHub::after {
+  background: #181717;
+}
+
+.techLinux::after {
+  background: #FCC624;
+}
+
+.techCSharp::after {
+  background: #9B4F96;
+}
+
+.techDotNet::after {
+  background: #512BD4;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 12px;
+}
+
+.projectLink {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+.projectLink:hover {
+  background: rgba(0, 248, 0);
+  box-shadow: 0 0px 20px rgba(0, 248, 0);
+  transform: translateY(-2px);
+}
+
+/* Navigation buttons */
+.navigationButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.navButton {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.navButton:disabled:hover {
+  transform: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.indicator.active {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+/* Responsive design */
+
+
+/* Estilo especial para o projeto placeholder */
+.placeholderProject {
+  background: rgba(255, 255, 255, 0.05) ;
+  border: 2px dashed rgba(255, 255, 255, 0.3) ;
+}
+
+.placeholderProject .projectTitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.placeholderProject .projectDescription {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.placeholderProject .techTag {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Animações para os projetos - todos aparecem juntos */
+.projectItem:nth-child(1).animate,
+.projectItem:nth-child(2).animate,
+.projectItem:nth-child(3).animate,
+.projectItem:nth-child(4).animate {
+  transition-delay: 0s;
+}
+
+/* Efeito hover suave */
+.projectItem:hover {
+  transform: translateY(-4px) scale(1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .sliderContainer {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 40px 0;
+  }
+
+  .projectsSection h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .sliderContainer {
+    max-width: 600px;
+  }
+  
+  .projectCard {
+    flex: 0 0 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  
+  .projectItem {
+    height: auto;
+    min-height: 280px;
+  }
+  
+  .projectImage {
+    height: 150px;
+  }
+  
+  .projectContent {
+    padding: 15px;
+  }
+  
+  .projectTitle {
+    font-size: 1.3rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.85rem;
+  }
+  
+  .projectLinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .navigationButtons {
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .navButton {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsSection {
+    padding: 20px 0;
+  }
+  
+  .projectsSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sliderContainer {
+    padding: 0 10px;
+  }
+  
+  .projectItem {
+    min-height: 250px;
+  }
+  
+  .projectImage {
+    height: 120px;
+  }
+  
+  .projectContent {
+    padding: 10px;
+  }
+
+  .projectTitle {
+    font-size: 1.2rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.8rem;
+  }
+  
+  .projectTechnologies {
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .techTag {
+    font-size: 0.7rem;
+    padding: 3px 12px 3px 6px;
+  }
+  
+  .navigationButtons {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .indicators {
+    gap: 8px;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+}

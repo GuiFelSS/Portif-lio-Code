@@ -1,0 +1,445 @@
+.technologiesSection {
+  width: 100%;
+  padding: 20px 0;
+  /* Um pouco de espaço vertical */
+  text-align: center;
+  /* background-color: #1A1A1A; */
+}
+
+.technologiesSection h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.sliderContainer {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  /* ESSENCIAL: Esconde o que está fora da área visível */
+  position: relative;
+  /* Necessário para a máscara de gradiente */
+  display: flex;
+  align-items: center;
+  /* background-color: #1A1A1A; */
+
+  /* DICA PRO: Cria um efeito de "fade-out" nas laterais */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+}
+
+/* Quando o usuário passar o mouse, a animação pausa. Ótimo para UX! */
+.sliderContainer:hover .sliderTrack {
+  animation-play-state: paused;
+}
+
+.sliderTrack {
+  display: flex;
+  /* (Número de logos) x 2 x (Largura de cada logo + gap) */
+  width: calc(14 * 2 * 150px);
+  animation: autoRun 25s linear infinite;
+}
+
+.logo {
+  flex-shrink: 0;
+  /* Previne que os logos encolham */
+  width: 150px;
+  /* Largura fixa para cada logo container */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  /* Espaçamento entre os logos */
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: grayscale(1);
+  /* Deixa em escala de cinza para um visual clean */
+  transition: filter 0.3s ease;
+}
+
+.logo img:hover {
+  filter: grayscale(0);
+  /* Colore a logo ao passar o mouse */
+}
+
+/* Filtro específico para o ícone do GitHub deixá-lo mais claro */
+.logo img[src*="github"] {
+  filter: grayscale(1) brightness(6);
+}
+
+.logo img[src*="github"]:hover {
+  filter: brightness(0) invert(1);
+}
+
+@keyframes autoRun {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    /* Move o track para a esquerda pelo tamanho exato da primeira lista de logos */
+    transform: translateX(calc(-14 * 150px));
+  }
+}
+
+.tecnologiesButtons {
+  width: 900px;
+  min-height: 200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+}
+
+/* Bottom and top glow effects - moved to container level */
+.tecnologiesButtons a {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 80px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Glow effects on the anchor element */
+.tecnologiesButtons a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.8s;
+  transition-delay: 0.1s;
+  z-index: 0;
+}
+
+.tecnologiesButtons a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.8s;
+  transition-delay: 0.1s;
+  z-index: 0;
+}
+
+.cssTechnology,
+.githubTechnology,
+.htmlTechnology,
+.javaTechnology,
+.javascriptTechnology,
+.nextjsTechnology,
+.pythonTechnology,
+.reactTechnology,
+.springTechnology,
+.sqldeveloperTechnology, 
+.csharpTechnology,
+.dockerTechnology,
+.linuxTechnology,
+.dotnetTechnology {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.152);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400;
+  z-index: 2;
+  transition: 0.2s;
+  backdrop-filter: blur(15px);
+
+  /* Add background image for icons */
+  background-image: var(--cssTechnology-image);
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Individual background images */
+.githubTechnology {
+  background-image: var(--githubTechnology-image);
+}
+
+.htmlTechnology {
+  background-image: var(--htmlTechnology-image);
+}
+
+.javaTechnology {
+  background-image: var(--javaTechnology-image);
+}
+
+.javascriptTechnology {
+  background-image: var(--javascriptTechnology-image);
+}
+
+.nextjsTechnology {
+  background-image: var(--nextjsTechnology-image);
+}
+
+.pythonTechnology {
+  background-image: var(--pythonTechnology-image);
+}
+
+.reactTechnology {
+  background-image: var(--reactTechnology-image);
+}
+
+.springTechnology {
+  background-image: var(--springTechnology-image);
+}
+
+.sqldeveloperTechnology {
+  background-image: var(--sqldeveloperTechnology-image);
+}
+
+.csharpTechnology {
+  background-image: var(--csharpTechnology-image);
+}
+
+.dockerTechnology {
+  background-image: var(--dockerTechnology-image);
+}
+
+.linuxTechnology {
+  background-image: var(--linuxTechnology-image);
+}
+
+.dotnetTechnology {
+  background-image: var(--dotnetTechnology-image);
+}
+
+/* Hover effects for button text */
+.tecnologiesButtons a:hover .cssTechnology,
+.tecnologiesButtons a:hover .githubTechnology,
+.tecnologiesButtons a:hover .htmlTechnology,
+.tecnologiesButtons a:hover .javaTechnology,
+.tecnologiesButtons a:hover .javascriptTechnology,
+.tecnologiesButtons a:hover .nextjsTechnology,
+.tecnologiesButtons a:hover .pythonTechnology,
+.tecnologiesButtons a:hover .reactTechnology,
+.tecnologiesButtons a:hover .springTechnology,
+.tecnologiesButtons a:hover .sqldeveloperTechnology,
+.tecnologiesButtons a:hover .csharpTechnology,
+.tecnologiesButtons a:hover .dockerTechnology,
+.tecnologiesButtons a:hover .linuxTechnology,
+.tecnologiesButtons a:hover .dotnetTechnology {
+  letter-spacing: 3px;
+}
+
+/* Before pseudo-element for shine effect */
+.cssTechnology::before,
+.githubTechnology::before,
+.htmlTechnology::before,
+.javaTechnology::before,
+.javascriptTechnology::before,
+.nextjsTechnology::before,
+.pythonTechnology::before,
+.reactTechnology::before,
+.springTechnology::before,
+.sqldeveloperTechnology::before, 
+.csharpTechnology::before,
+.dockerTechnology::before,
+.linuxTechnology::before,
+.dotnetTechnology::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.4s;
+  filter: blur(0px);
+}
+
+/* Hover shine effect */
+.tecnologiesButtons a:hover .cssTechnology::before,
+.tecnologiesButtons a:hover .githubTechnology::before,
+.tecnologiesButtons a:hover .htmlTechnology::before,
+.tecnologiesButtons a:hover .javaTechnology::before,
+.tecnologiesButtons a:hover .javascriptTechnology::before,
+.tecnologiesButtons a:hover .nextjsTechnology::before,
+.tecnologiesButtons a:hover .pythonTechnology::before,
+.tecnologiesButtons a:hover .reactTechnology::before,
+.tecnologiesButtons a:hover .springTechnology::before,
+.tecnologiesButtons a:hover .sqldeveloperTechnology::before,
+.tecnologiesButtons a:hover .csharpTechnology::before,
+.tecnologiesButtons a:hover .dockerTechnology::before,
+.tecnologiesButtons a:hover .linuxTechnology::before,
+.tecnologiesButtons a:hover .dotnetTechnology::before {
+  transform: skewX(45deg) translate(200px);
+}
+
+/* Hover effects for glow */
+.tecnologiesButtons a:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.tecnologiesButtons a:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+/* Individual color schemes for each technology using nth-child */
+.tecnologiesButtons a:nth-child(1)::before,
+.tecnologiesButtons a:nth-child(1)::after {
+  background: #1572B6;
+  box-shadow: 0 0 5px #1572B6, 0 0 15px #1572B6, 0 0 30px #1572B6, 0 0 60px #1572B6;
+}
+
+.tecnologiesButtons a:nth-child(2)::before,
+.tecnologiesButtons a:nth-child(2)::after {
+  background: #ffffff;
+  box-shadow: 0 0 5px #333, 0 0 15px #333, 0 0 30px #333, 0 0 60px #333;
+}
+
+.tecnologiesButtons a:nth-child(3)::before,
+.tecnologiesButtons a:nth-child(3)::after {
+  background: #E34F26;
+  box-shadow: 0 0 5px #E34F26, 0 0 15px #E34F26, 0 0 30px #E34F26, 0 0 60px #E34F26;
+}
+
+.tecnologiesButtons a:nth-child(4)::before,
+.tecnologiesButtons a:nth-child(4)::after {
+  background: #ED8B00;
+  box-shadow: 0 0 5px #ED8B00, 0 0 15px #ED8B00, 0 0 30px #ED8B00, 0 0 60px #ED8B00;
+}
+
+.tecnologiesButtons a:nth-child(5)::before,
+.tecnologiesButtons a:nth-child(5)::after {
+  background: #f7de1ebc;
+  box-shadow: 0 0 5px #F7DF1E, 0 0 15px #F7DF1E, 0 0 30px #F7DF1E, 0 0 60px #F7DF1E;
+}
+
+.tecnologiesButtons a:nth-child(6)::before,
+.tecnologiesButtons a:nth-child(6)::after {
+  background: #FFFFFF;
+  box-shadow: 0 0 5px #000, 0 0 15px #000, 0 0 30px #000, 0 0 60px #000;
+}
+
+.tecnologiesButtons a:nth-child(7)::before,
+.tecnologiesButtons a:nth-child(7)::after {
+  background: #3776AB;
+  box-shadow: 0 0 5px #3776AB, 0 0 15px #3776AB, 0 0 30px #3776AB, 0 0 60px #3776AB;
+}
+
+.tecnologiesButtons a:nth-child(8)::before,
+.tecnologiesButtons a:nth-child(8)::after {
+  background: #61dafb9f;
+  box-shadow: 0 0 5px #61dafb9f, 0 0 15px #61dafb9f, 0 0 30px #61dafb9f, 0 0 60px #61dafb9f;
+}
+
+.tecnologiesButtons a:nth-child(9)::before,
+.tecnologiesButtons a:nth-child(9)::after {
+  background: #6db33fb6;
+  box-shadow: 0 0 5px #6DB33F, 0 0 15px #6DB33F, 0 0 30px #6DB33F, 0 0 60px #6DB33F;
+}
+
+.tecnologiesButtons a:nth-child(10)::before,
+.tecnologiesButtons a:nth-child(10)::after {
+  background: #F80000;
+  box-shadow: 0 0 5px #F80000, 0 0 15px #F80000, 0 0 30px #F80000, 0 0 60px #F80000;
+}
+
+.tecnologiesButtons a:nth-child(11)::before,
+.tecnologiesButtons a:nth-child(11)::after {
+  background: #9B4F96;
+  box-shadow: 0 0 5px #9B4F96, 0 0 15px #9B4F96, 0 0 30px #9B4F96, 0 0 60px #9B4F96;
+}
+
+.tecnologiesButtons a:nth-child(12)::before,
+.tecnologiesButtons a:nth-child(12)::after {
+  background: #2496ED;
+  box-shadow: 0 0 5px #2496ED, 0 0 15px #2496ED, 0 0 30px #2496ED, 0 0 60px #2496ED;
+}
+
+.tecnologiesButtons a:nth-child(13)::before,
+.tecnologiesButtons a:nth-child(13)::after {
+  background: #FCCB27;
+  box-shadow: 0 0 5px #FCCB27, 0 0 15px #FCCB27, 0 0 30px #FCCB27, 0 0 60px #FCCB27;
+}
+
+.tecnologiesButtons a:nth-child(14)::before,
+.tecnologiesButtons a:nth-child(14)::after {
+  background: #512BD4;
+  box-shadow: 0 0 5px #512BD4, 0 0 15px #512BD4, 0 0 30px #512BD4, 0 0 60px #512BD4;
+}
+
+/* Apenas para quando adicionar mais tecnologias no futuro */
+/* Remove margens específicas em elementos adicionais */
+.tecnologiesButtons a:nth-child(n+15) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Responsividade básica apenas para telas muito pequenas */
+@media (max-width: 900px) {
+  .technologiesSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .sliderContainer {
+    height: 80px;
+  }
+  .logo {
+    width: 100px;
+    height: 60px;
+  }
+  .tecnologiesButtons {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .technologiesSection {
+    padding: 10px 0;
+  }
+  .technologiesSection h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tecnologiesButtons {
+    width: 95%;
+    gap: 15px;
+  }
+  .tecnologiesButtons a {
+    width: 130px;
+    height: 70px;
+  }
+}
