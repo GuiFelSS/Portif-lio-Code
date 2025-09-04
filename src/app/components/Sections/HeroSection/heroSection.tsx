@@ -36,15 +36,15 @@ export default function HeroSection() {
                     </h1>
 
                     <h2 className={styles.subtitle}>
-                        Eu sou um Desenvolvedor{' '}
+                        E sou um Desenvolvedor{' '}
                         <TypeAnimation
                             sequence={[
                                 'Front-End',
                                 2000,
                                 'Back-End',
                                 2000,
-                                'Full-stack, pronto KKKK',
-                                0.2,
+                                'Full-stack',
+                                2000,
                             ]}
                             wrapper="span"
                             speed={8}
@@ -54,7 +54,7 @@ export default function HeroSection() {
                     </h2>
 
                     <p className={styles.description}>
-                        Transformando ideias em realidade através de código, com foco em criar soluções web modernas e eficientes.
+                        Acredito que a melhor tecnologia é aquela que serve às pessoas. Por isso, dedico-me a construir aplicações intuitivas e acessíveis, buscando sempre gerar um impacto positivo e real na vida de quem as utiliza.
                     </p>
 
                     <div className={styles.socialLinks}>
@@ -71,7 +71,7 @@ export default function HeroSection() {
                                 Sobre
                         </a>
 
-                        <a href="/Guilherme_Felipe_da_Silva_Souza_CV_Portifolio.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer"
                             className={styles.CvButton}>
                                 Meu CV
                         </a>

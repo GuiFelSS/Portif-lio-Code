@@ -75,17 +75,17 @@
 
 .subtitle {
     font-size: 1.25rem;
-    /* 20px */
+
     font-weight: 400;
     margin-bottom: 1.5rem;
-    /* 24px */
+
 }
 
 .description {
     max-width: 600px;
     line-height: 1.6;
     margin-bottom: 2rem;
-    /* 32px */
+    font-size: 1.1rem;
 }
 
 .socialLinks {
