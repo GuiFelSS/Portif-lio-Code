@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.3.4",
+    "next": "15.3.8",
     "particles.js": "^2.0.0",
     "particlesjs": "^2.2.3",
     "react": "^19.0.0",
