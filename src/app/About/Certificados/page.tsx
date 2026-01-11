@@ -1,6 +1,9 @@
+"use client";
+
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface Certificados {
     id: number;
@@ -74,9 +77,55 @@ const certificados: Certificados[] = [
 ]
 
 export default function CertificadosPage() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <main className={styles.mainCertificados}>
             <header className={styles.headerCertificados}>
+
+                {/* Header Mobile */}
+                <div className={styles.headerMobile}>
+                    <h2 className={styles.logo}>GUIFELSS</h2>
+                    <button
+                        className={styles.hamburgerBtn}
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label="Menu"
+                    >
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M4 7H24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M4 14H24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M4 21H24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Overlay Mobile */}
+                {menuOpen && (
+                    <div
+                        className={styles.menuOverlay}
+                        onClick={() => setMenuOpen(false)}
+                    />
+                )}
+
+                {/* Menu Mobile */}
+                <nav className={`${styles.navMobile} ${menuOpen ? styles.open : ''}`}>
+                    <ul>
+                        <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+                        <li><a href="/About" onClick={() => setMenuOpen(false)}>Sobre</a></li>
+                        <li><a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer">Meu CV</a></li>
+                    </ul>
+                    <button
+                        className={styles.closeBtn}
+                        onClick={() => setMenuOpen(false)}
+                        aria-label="Fechar"
+                    >
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M6 6L22 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M22 6L6 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                        </svg>
+                    </button>
+                </nav>
+
                 <div className={styles.profileImageContainer}>
                     <Image
                         src="/foto_perfil_teste.jpg"
