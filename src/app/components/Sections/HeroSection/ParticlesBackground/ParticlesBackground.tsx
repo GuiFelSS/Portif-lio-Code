@@ -41,10 +41,15 @@ export default function ParticlesBackground() {
 
   const initParticles = () => {
     if (!window.particlesJS) return;
+    
+    // Detecta se é mobile e ajusta quantidade de partículas
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    const particleCount = isMobile ? 60 : 200;
+    
     window.particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 200,
+          "value": particleCount,
           "density": {
             "enable": true,
             "value_area": 1000
