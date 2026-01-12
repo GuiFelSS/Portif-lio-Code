@@ -13,11 +13,11 @@
   --gray-dark: #2A2A2A;
   --gray-darker: #1a1a1a;
   --gray-medium: #2d2d2d;
-  --green-rgba: rgba(0, 248, 0, 1);
+  /* --green-rgba: rgba(0, 248, 0, 1);
   --green-rgba-light: rgba(0, 248, 0, 0.3);
   --white-rgba-10: rgba(255, 255, 255, 0.1);
   --white-rgba-20: rgba(255, 255, 255, 0.2);
-  --green-rgba-255: rgba(0, 255, 0, 1);
+  --green-rgba-255: rgba(0, 255, 0, 1); */
 }
 
 html,
@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
   background-color: var(--black);
   color: var(--white);
-  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-family: var(--font-tinos), 'Times New Roman', Times, serif;
 }
 
 a {

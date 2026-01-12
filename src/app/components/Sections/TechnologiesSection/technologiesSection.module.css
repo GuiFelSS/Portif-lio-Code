@@ -6,7 +6,7 @@
 
 .technologiesSection h2 {
   font-size: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .sliderContainer {
@@ -400,8 +400,8 @@
 /* Responsividade básica apenas para telas muito pequenas */
 @media (max-width: 900px) {
   .technologiesSection h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
   }
   .sliderContainer {
     height: 80px;
@@ -417,20 +417,47 @@
 }
 
 @media (max-width: 600px) {
-  .technologiesSection {
-    padding: 10px 0;
+
+  /* Desabilita backdrop-filter no mobile para performance */
+  .cssTechnology,
+  .githubTechnology,
+  .htmlTechnology,
+  .javaTechnology,
+  .javascriptTechnology,
+  .nextjsTechnology,
+  .pythonTechnology,
+  .reactTechnology,
+  .springTechnology,
+  .sqldeveloperTechnology, 
+  .csharpTechnology,
+  .dockerTechnology,
+  .linuxTechnology,
+  .dotnetTechnology {
+    backdrop-filter: none;
+    transition: none;
   }
-  .technologiesSection h2 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+
+  /* Remove efeitos hover, before e after no mobile */
+  .tecnologiesButtons a::before,
+  .tecnologiesButtons a::after {
+    display: none;
   }
-  
-  .tecnologiesButtons {
-    width: 95%;
-    gap: 15px;
-  }
-  .tecnologiesButtons a {
-    width: 130px;
-    height: 70px;
+
+  /* Remove shine effect no mobile */
+  .cssTechnology::before,
+  .githubTechnology::before,
+  .htmlTechnology::before,
+  .javaTechnology::before,
+  .javascriptTechnology::before,
+  .nextjsTechnology::before,
+  .pythonTechnology::before,
+  .reactTechnology::before,
+  .springTechnology::before,
+  .sqldeveloperTechnology::before, 
+  .csharpTechnology::before,
+  .dockerTechnology::before,
+  .linuxTechnology::before,
+  .dotnetTechnology::before {
+    display: none;
   }
 }
