@@ -15,7 +15,7 @@
 
 .projectsSection h2 {
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: #fff;
   text-align: center;
   opacity: 0;
@@ -419,72 +419,5 @@
   .indicator {
     width: 10px;
     height: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .projectsSection {
-    padding: 20px 0;
-  }
-  
-  .projectsSection h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .sliderContainer {
-    padding: 0 10px;
-  }
-  
-  .projectItem {
-    min-height: 250px;
-  }
-  
-  .projectImage {
-    height: 120px;
-  }
-  
-  .projectContent {
-    padding: 10px;
-  }
-
-  .projectTitle {
-    font-size: 1.2rem;
-  }
-  
-  .projectDescription {
-    font-size: 0.8rem;
-  }
-  
-  .projectTechnologies {
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 10px;
-  }
-  
-  .techTag {
-    font-size: 0.7rem;
-    padding: 3px 12px 3px 6px;
-  }
-  
-  .navigationButtons {
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .navButton {
-    width: 40px;
-    height: 40px;
-    font-size: 0.9rem;
-  }
-  
-  .indicators {
-    gap: 8px;
-  }
-  
-  .indicator {
-    width: 8px;
-    height: 8px;
   }
 }

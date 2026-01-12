@@ -2,7 +2,11 @@
 
 import { useEffect } from 'react';
 
-
+declare global {
+  interface Window {
+    particlesJS?: (tagId: string, params: object, callback?: () => void) => void;
+  }
+}
 
 export default function ParticlesBackground() {
   useEffect(() => {
@@ -114,7 +118,7 @@ export default function ParticlesBackground() {
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
+            "enable": !isMobile,
             "mode": "grab"
           },
           "onclick": {
