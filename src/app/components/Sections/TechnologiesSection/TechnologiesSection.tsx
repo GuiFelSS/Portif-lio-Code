@@ -2,9 +2,9 @@ import Image from 'next/image';
 import styles from './technologiesSection.module.css';
 
 const logos = [
-  { src: '/icons_logos/css3-original.svg', alt: 'CSS3', className: 'cssTechnology', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
+  { src: '/icons_logos/typescript-original.svg', alt: 'TypeScript', className: 'typescriptTechnology', url: 'https://www.typescriptlang.org/' },
   { src: '/icons_logos/github-original.svg', alt: 'GitHub', className: 'githubTechnology', url: 'https://docs.github.com/pt/get-started/start-your-journey/about-github-and-git' },
-  { src: '/icons_logos/html5-original.svg', alt: 'HTML5', className: 'htmlTechnology', url: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML' },
+  { src: '/icons_logos/mongodb-original-wordmark.svg', alt: 'MongoDB', className: 'mongoDBTechnology', url: 'https://www.mongodb.com/pt-br' },
   { src: '/icons_logos/java-original.svg', alt: 'Java', className: 'javaTechnology', url: 'https://www.java.com/pt-BR/' },
   { src: '/icons_logos/javascript-original.svg', alt: 'JavaScript', className: 'javascriptTechnology', url: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript' },
   { src: '/icons_logos/nextjs-wordmark.svg', alt: 'Next.js', className: 'nextjsTechnology', url: 'https://nextjs.org/' },

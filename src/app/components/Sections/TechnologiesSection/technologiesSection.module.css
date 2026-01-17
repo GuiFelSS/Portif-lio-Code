@@ -134,9 +134,9 @@
   z-index: 0;
 }
 
-.cssTechnology,
+.typescriptTechnology,
 .githubTechnology,
-.htmlTechnology,
+.mongoDBTechnology,
 .javaTechnology,
 .javascriptTechnology,
 .nextjsTechnology,
@@ -169,7 +169,7 @@
   transition: 0.2s;
   backdrop-filter: blur(15px);
 
-  background-image: var(--cssTechnology-image);
+  background-image: var(--typescriptTechnology-image);
   background-size: 30px 30px;
   background-position: center;
   background-repeat: no-repeat;
@@ -180,8 +180,8 @@
   background-image: var(--githubTechnology-image);
 }
 
-.htmlTechnology {
-  background-image: var(--htmlTechnology-image);
+.mongoDBTechnology {
+  background-image: var(--mongoDBTechnology-image);
 }
 
 .javaTechnology {
@@ -229,9 +229,9 @@
 }
 
 /* Hover effects */
-.tecnologiesButtons a:hover .cssTechnology,
+.tecnologiesButtons a:hover .typescriptTechnology,
 .tecnologiesButtons a:hover .githubTechnology,
-.tecnologiesButtons a:hover .htmlTechnology,
+.tecnologiesButtons a:hover .mongoDBTechnology,
 .tecnologiesButtons a:hover .javaTechnology,
 .tecnologiesButtons a:hover .javascriptTechnology,
 .tecnologiesButtons a:hover .nextjsTechnology,
@@ -246,9 +246,9 @@
   letter-spacing: 3px;
 }
 
-.cssTechnology::before,
+.typescriptTechnology::before,
 .githubTechnology::before,
-.htmlTechnology::before,
+.mongoDBTechnology::before,
 .javaTechnology::before,
 .javascriptTechnology::before,
 .nextjsTechnology::before,
@@ -273,9 +273,9 @@
 }
 
 /* Hover shine effect */
-.tecnologiesButtons a:hover .cssTechnology::before,
+.tecnologiesButtons a:hover .typescriptTechnology::before,
 .tecnologiesButtons a:hover .githubTechnology::before,
-.tecnologiesButtons a:hover .htmlTechnology::before,
+.tecnologiesButtons a:hover .mongoDBTechnology::before,
 .tecnologiesButtons a:hover .javaTechnology::before,
 .tecnologiesButtons a:hover .javascriptTechnology::before,
 .tecnologiesButtons a:hover .nextjsTechnology::before,
@@ -308,8 +308,8 @@
 /* Individual color */
 .tecnologiesButtons a:nth-child(1)::before,
 .tecnologiesButtons a:nth-child(1)::after {
-  background: #1572B6;
-  box-shadow: 0 0 5px #1572B6, 0 0 15px #1572B6, 0 0 30px #1572B6, 0 0 60px #1572B6;
+  background: #3178c6;
+  box-shadow: 0 0 5px #3178c6, 0 0 15px #3178c6, 0 0 30px #3178c6, 0 0 60px #3178c6;
 }
 
 .tecnologiesButtons a:nth-child(2)::before,
@@ -320,8 +320,8 @@
 
 .tecnologiesButtons a:nth-child(3)::before,
 .tecnologiesButtons a:nth-child(3)::after {
-  background: #E34F26;
-  box-shadow: 0 0 5px #E34F26, 0 0 15px #E34F26, 0 0 30px #E34F26, 0 0 60px #E34F26;
+  background: #00ed64;
+  box-shadow: 0 0 5px #00ed64, 0 0 15px #00ed64, 0 0 30px #00ed64, 0 0 60px #00ed64;
 }
 
 .tecnologiesButtons a:nth-child(4)::before,
@@ -419,9 +419,9 @@
 @media (max-width: 600px) {
 
   /* Desabilita backdrop-filter no mobile para performance */
-  .cssTechnology,
+  .typescriptTechnology,
   .githubTechnology,
-  .htmlTechnology,
+  .mongoDBTechnology,
   .javaTechnology,
   .javascriptTechnology,
   .nextjsTechnology,
@@ -444,9 +444,9 @@
   }
 
   /* Remove shine effect no mobile */
-  .cssTechnology::before,
+  .typescriptTechnology::before,
   .githubTechnology::before,
-  .htmlTechnology::before,
+  .mongoDBTechnology::before,
   .javaTechnology::before,
   .javascriptTechnology::before,
   .nextjsTechnology::before,
