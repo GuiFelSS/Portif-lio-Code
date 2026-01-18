@@ -174,8 +174,7 @@
   background: #61DAFB;
 }
 
-.techNextjs::after,
-.techNext::after {
+.techNextjs::after {
   background: #000;
 }
 
@@ -183,7 +182,6 @@
   background: #F7DF1E;
 }
 
-.techSpring::after,
 .techSpringBoot::after {
   background: #6DB33F;
 }
@@ -230,6 +228,14 @@
 
 .techDotNet::after {
   background: #512BD4;
+}
+
+.techTypeScript::after {
+  background: #3178C6;
+}
+
+.techAI::after {
+  background: #2323ff;
 }
 
 .projectLinks {
@@ -371,8 +377,13 @@
     max-width: 600px;
   }
   
+  .sliderWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
   .projectCard {
-    flex: 0 0 100%;
+    flex: 0 0 auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 20px;
@@ -381,6 +392,10 @@
   .projectItem {
     height: auto;
     min-height: 280px;
+  }
+
+  .projectItem:hover {
+    transform: none;
   }
   
   .projectImage {
@@ -403,17 +418,23 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  .projectLink:hover {
+    transform: none;
+  }
   
   .navigationButtons {
-    flex-direction: row;
-    gap: 15px;
-    margin-top: 30px;
+    display: none;
   }
   
   .navButton {
     width: 45px;
     height: 45px;
     font-size: 1rem;
+  }
+  
+  .indicators {
+    display: none;
   }
   
   .indicator {
