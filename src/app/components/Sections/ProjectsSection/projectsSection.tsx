@@ -1,5 +1,4 @@
 
-
 'use client';
 
 import Image from 'next/image';
@@ -25,39 +24,49 @@ const projects: Project[] = [
     title: "Alagaqui",
     description: "Um sistema inteligente que une a colaboração dos cidadãos e a tecnologia IoT para mapear alagamentos em São Paulo em tempo real. Descubra como transformamos dados em segurança urbana.",
     image: "/project_imgs/Alagaqui/Alagaqui-logo.jpg",
-    technologies: ["React Native", "Java", "SQL", "JavaScript", "Spring Boot", "GitHub", "Docker", "Linux", "C#", ".NET"],
+    technologies: ["React Native", "Java", "SQL", "AI", "JavaScript", "Spring Boot", "GitHub", "Docker", "Linux", "C#", ".NET", "TypeScript"],
     liveLink: "https://github.com/GuiFelSS/Alagaqui",
     githubLink: "https://github.com/GuiFelSS/Alagaqui",
     VerMais: "/Projects/Alagaqui"
   },
   {
     id: 2,
-    title: "Solar Drive",
-    description: "Um sistema de painéis solares adaptáveis que gera energia limpa para o carro enquanto ele se move. Descubra como o Solar Drive alimenta os sistemas secundários do veículo e promove uma economia inteligente da bateria principal, revolucionando a eficiência energética no asfalto.",
-    image: "/project_imgs/SolarDrive/solar_drive.png", // Placeholder - você pode substituir pela imagem real
-    technologies: ["Java", "SQL", "Next.js", "Python", "GitHub"],
-    liveLink: "https://global-solution-2-oau6.vercel.app/",
-    githubLink: "https://github.com/GuiFelSS/Solar-Drive",
-    VerMais: "/Projects/SolarDrive"
+    title: "Troca Comigo",
+    description: "Um ecossistema de impacto social que transforma conhecimento e tempo em moeda de troca. Unindo a economia colaborativa à tecnologia, a plataforma democratiza o acesso à educação ao conectar mentores e aprendizes globalmente, rompendo barreiras geográficas para fomentar uma comunidade de aprendizado contínuo e acessível.",
+    image: "/project_imgs/Troca_Comigo/troca_comigo.png",
+    technologies: ["React Native", "Spring Boot", "SQL", "AI", "TypeScript", "Java", "Docker", "C#", ".NET", "GitHub"],
+    githubLink: "https://github.com/GuiFelSS/Troca_Comigo_Global_2_2025",
+    VerMais: "/Projects/Troca_comigo"
   },
   {
     id: 3,
     title: "Eficientiza",
     description: "Um projeto em andamento em parceria com a Mottu para resolver um desafio de escala. Desenvolvendo uma solução com Visão Computacional e IoT para o mapeamento em tempo real de milhares de motos para uma das startups que mais crescem na América Latina.",
     image: "/project_imgs/Eficientiza/eficientiza-logo.png",
-    technologies: ["React Native", "Java", "SQL", "JavaScript", "Spring Boot", "GitHub", "Docker", "Linux", "C#", ".NET"],
+    technologies: ["React Native", "Java", "SQL", "JavaScript", "Spring Boot", "AI", "GitHub", "Docker", "Linux", "C#", ".NET", "TypeScript"],
     githubLink: "https://github.com/GuiFelSS/Eficientiza",
     VerMais: "/Projects/Eficientiza"
   },
   {
     id: 4,
+    title: "Solar Drive",
+    description: "Um sistema de painéis solares adaptáveis que gera energia limpa para o carro enquanto ele se move. Descubra como o Solar Drive alimenta os sistemas secundários do veículo e promove uma economia inteligente da bateria principal, revolucionando a eficiência energética no asfalto.",
+    image: "/project_imgs/SolarDrive/solar_drive.png",
+    technologies: ["Java", "SQL", "Next.js", "Python", "GitHub"],
+    liveLink: "https://global-solution-2-oau6.vercel.app/",
+    githubLink: "https://github.com/GuiFelSS/Solar-Drive",
+    VerMais: "/Projects/SolarDrive"
+  },
+  {
+    id: 5,
     title: "Meu Portfólio",
     description: "Este é meu portifólio, desenvolvido com Next.js, apresentando alguns dos meus projetos desenvolvidos sozinho e em grupo durante minha jornada de aprendizado em busca por oportunidades na área de desenvolvimento (por favor me de essa oportunidade 🙏 kkkk) fique à vontade para explorar e conhecer mais sobre meu trabalho e habilidades, espero que goste e desde já agradeço pela atenção.",
     image: "/project_imgs/P_portifolio/Portifolio.jpeg",
-    technologies: ["Next.js", "GitHub"],
+    technologies: ["TypeScript", "Next.js", "GitHub"],
     githubLink: "https://github.com/GuiFelSS/Web_Portifolio",
     VerMais: "/Projects/pro_portifolio"
   },
+  
 ];
 
 export default function ProjectsSection() {
@@ -65,14 +74,31 @@ export default function ProjectsSection() {
   const [expandedDescriptions, setExpandedDescriptions] = useState<{ [key: number]: boolean }>({});
   const [expandedTechnologies, setExpandedTechnologies] = useState<{ [key: number]: boolean }>({});
   const [animatedProjects, setAnimatedProjects] = useState<Set<number>>(new Set());
+  const [isMobile, setIsMobile] = useState(false);
 
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
   });
 
-  //4 projetos por página (2x2)
-  const projectsPerPage = 4;
+  // Detectar mobile e ajustar projetos por página
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+      setIsMobile(mobile);
+      // Se voltou para mobile, reseta para primeira página
+      if (mobile && currentIndex > 0) {
+        setCurrentIndex(0);
+      }
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [currentIndex]);
+
+  // Em mobile mostra todos os projetos, em desktop mostra 4 (2x2)
+  const projectsPerPage = isMobile ? projects.length : 4;
   const totalSlides = Math.ceil(projects.length / projectsPerPage);
 
   //Tamanho máximo da descrição antes de truncar
@@ -140,6 +166,8 @@ export default function ProjectsSection() {
       'linux': 'techLinux',
       'c#': 'techCSharp',
       'net': 'techDotNet',
+      'typescript': 'techTypeScript',
+      'ai': 'techAI',
     };
 
     return techClassMap[normalizedTech] || '';
