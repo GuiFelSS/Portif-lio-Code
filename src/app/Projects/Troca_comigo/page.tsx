@@ -97,7 +97,7 @@ export default function ProjectsPage() {
                 ></iframe>
 
                 <p>
-                    O <strong>Troca Comigo</strong> é um projeto inovador desenvolvido por mim juntamente com <a href="https://www.linkedin.com/in/vinicius-leopoldino-9a2194120/" target="_blank"><strong>Vinicius Leopoldino</strong></a> e <a href="https://www.linkedin.com/in/pablo-lopes-09a66a275/" target="_blank"><strong>Pablo Lopes</strong></a> para a Global Solution do segundo semestre de 2025, com o objetivo de enfrentar os desafios da democratização do ensino. A solução consiste em uma plataforma de economia colaborativa que conecta mentores e aprendizes, transformando conhecimento em moeda de troca.
+                    O <strong>Troca Comigo</strong> é um projeto inovador desenvolvido por mim juntamente com <a href="https://www.linkedin.com/in/vinicius-leopoldino-9a2194120/" target="_blank"><strong><u>Vinicius Leopoldino</u></strong></a> e <a href="https://www.linkedin.com/in/pablo-lopes-09a66a275/" target="_blank"><strong><u>Pablo Lopes</u></strong></a> para a Global Solution do segundo semestre de 2025, com o objetivo de enfrentar os desafios da democratização do ensino. A solução consiste em uma plataforma de economia colaborativa que conecta mentores e aprendizes, transformando conhecimento em moeda de troca.
                 </p>
 
                 <h4>Como Funciona?</h4>
@@ -130,6 +130,7 @@ export default function ProjectsPage() {
                 </p>
 
                 <p><strong><em>*Mais informações técnicas no GitHub do projeto*</em></strong></p>
+                <p><strong><em>*click no nome dos pareceiros envolvidos para ir para seus perfis no Linkedin*</em></strong></p>
             </section>
         </main>
     );

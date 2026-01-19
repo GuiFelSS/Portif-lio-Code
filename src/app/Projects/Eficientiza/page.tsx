@@ -97,7 +97,7 @@ export default function ProjectsPage() {
                 ></iframe>
 
                 <p>
-                    Atualmente, estou imerso, junto com minha equipe composta pelo <a href="https://www.linkedin.com/in/alexsandro-macedo-jesus/" target="_blank"><strong>Alexsandro Macedo</strong></a> e <a href="https://www.linkedin.com/in/lfsalazaar/" target="_blank"><strong>Leonardo Salazar</strong></a>, no <strong>Challenge 2025 da FIAP</strong>,
+                    Atualmente, estou imerso, junto com minha equipe composta pelo <a href="https://www.linkedin.com/in/alexsandro-macedo-jesus/" target="_blank"><strong><u>Alexsandro Macedo</u></strong></a> e <a href="https://www.linkedin.com/in/lfsalazaar/" target="_blank"><strong><u>Leonardo Salazar</u></strong></a>, no <strong>Challenge 2025 da FIAP</strong>,
                     um projeto desenvolvido em parceria com a <strong>Mottu</strong>.
                     A Mottu é uma startup de mobilidade que oferece soluções de aluguel de motos,
                     atendendo principalmente a entregadores no Brasil e no México.
@@ -139,6 +139,7 @@ export default function ProjectsPage() {
                 </p>
 
                 <p><strong><em>*Mais informações tecnicas no GitHub do projeto*</em></strong></p>
+                <p><strong><em>*click no nome dos pareceiros envolvidos para ir para seus perfis no Linkedin*</em></strong></p>
             </section>
         </main>
     );

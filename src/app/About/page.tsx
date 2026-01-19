@@ -40,7 +40,7 @@ export default function AboutPage() {
                     <ul>
                         <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
                         <li><a href="/About/Certificados" onClick={() => setMenuOpen(false)}>Certificados</a></li>
-                        <li><a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer">Meu CV</a></li>
+                        <li><a href="/Guilherme_Felipe_da_Silva_Souza_CV_Full.pdf" target="_blank" rel="noopener noreferrer">Meu CV</a></li>
                     </ul>
                     <button
                         className={styles.closeBtn}
@@ -77,7 +77,7 @@ export default function AboutPage() {
 
                     <ul>
                         <li>
-                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer">
+                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV_Full.pdf" target="_blank" rel="noopener noreferrer">
                                 Meu CV
                             </a>
                         </li>

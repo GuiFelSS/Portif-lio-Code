@@ -97,7 +97,7 @@ export default function ProjectsPage() {
                 ></iframe>
 
                 <p>
-                    O <strong>Alagaqui</strong> é um projeto inovador desenvolvido por mim juntamente com <a href="https://www.linkedin.com/in/alexsandro-macedo-jesus/" target="_blank"><strong>Alexsandro Macedo</strong></a> e <a href="https://www.linkedin.com/in/lfsalazaar/" target="_blank"><strong>Leonardo Salazar</strong></a> para a Global Solution do primeiro semestre de 2025, com o objetivo de enfrentar um dos maiores desafios urbanos de São Paulo: as enchentes. A solução consiste em uma plataforma completa que monitora pontos de alagamento em tempo real, alertando cidadãos e ajudando na prevenção de danos.
+                    O <strong>Alagaqui</strong> é um projeto inovador desenvolvido por mim juntamente com <a href="https://www.linkedin.com/in/alexsandro-macedo-jesus/" target="_blank"><strong><u>Alexsandro Macedo</u></strong></a> e <a href="https://www.linkedin.com/in/lfsalazaar/" target="_blank"><strong><u>Leonardo Salazar</u></strong></a> para a Global Solution do primeiro semestre de 2025, com o objetivo de enfrentar um dos maiores desafios urbanos de São Paulo: as enchentes. A solução consiste em uma plataforma completa que monitora pontos de alagamento em tempo real, alertando cidadãos e ajudando na prevenção de danos.
                 </p>
 
                 <h4>Como Funciona?</h4>
@@ -133,6 +133,7 @@ export default function ProjectsPage() {
                 </p>
 
                 <p><strong><em>*Mais informações tecnicas no GitHub do projeto*</em></strong></p>
+                <p><strong><em>*click no nome dos pareceiros envolvidos para ir para seus perfis no Linkedin*</em></strong></p>
             </section>
         </main>
     );

@@ -40,36 +40,48 @@ const certificados: Certificados[] = [
     },
     {
         id: 5,
+        title: 'Certificação Nano course - Banco de Dados Oracle',
+        image: '/certificados/IMAGENs/Fiap-certificado-5.png',
+        link: '/certificados/PDFs/Fiap-certificado-5.pdf'
+    },
+    {
+        id: 6,
+        title: 'Certificação Nano course - Linux Fundamentos',
+        image: '/certificados/IMAGENs/Fiap-certificado-6.png',
+        link: '/certificados/PDFs/Fiap-certificado-6.pdf'
+    },
+    {
+        id: 7,
         title: 'JavaScript: manipulando elementos no DOM',
         image: '/certificados/IMAGENs/Alura-certificado-1.png',
         link: '/certificados/PDFs/Alura-certificado-1.pdf'
     },
     {
-        id: 6,
+        id: 8,
         title: 'Python: crie a sua primeira aplicação',
         image: '/certificados/IMAGENs/Alura-certificado-2.png',
         link: '/certificados/PDFs/Alura-certificado-2.pdf'
     },
     {
-        id: 7,
+        id: 9,
         title: 'Java: criando a sua primeira aplicação',
         image: '/certificados/IMAGENs/Alura-certificado-3.png',
         link: '/certificados/PDFs/Alura-certificado-3.pdf'
     },
     {
-        id: 8,
+        id: 10,
         title: 'JavaScript para Web: Crie páginas dinâmicas',
         image: '/certificados/IMAGENs/Alura-certificado-4.png',
         link: '/certificados/PDFs/Alura-certificado-4.pdf'
     },
     {
-        id: 9,
+        id: 11,
         title: 'JavaScript: consumindo e tratando dados de uma API',
         image: '/certificados/IMAGENs/Alura-certificado-5.png',
         link: '/certificados/PDFs/Alura-certificado-5.pdf'
     },
     {
-        id: 10,
+        id: 12,
         title: 'JavaScript: explorando a manipulação de elementos e da localStorage',
         image: '/certificados/IMAGENs/Alura-certificado-6.png',
         link: '/certificados/PDFs/Alura-certificado-6.pdf'
@@ -112,7 +124,7 @@ export default function CertificadosPage() {
                     <ul>
                         <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
                         <li><a href="/About" onClick={() => setMenuOpen(false)}>Sobre</a></li>
-                        <li><a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer">Meu CV</a></li>
+                        <li><a href="/Guilherme_Felipe_da_Silva_Souza_CV_Full.pdf" target="_blank" rel="noopener noreferrer">Meu CV</a></li>
                     </ul>
                     <button
                         className={styles.closeBtn}
@@ -149,7 +161,7 @@ export default function CertificadosPage() {
 
                     <ul>
                         <li>
-                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer">
+                            <a href="/Guilherme_Felipe_da_Silva_Souza_CV_Full.pdf" target="_blank" rel="noopener noreferrer">
                                 Meu CV
                             </a>
                         </li>
