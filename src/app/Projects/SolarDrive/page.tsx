@@ -98,8 +98,8 @@ export default function ProjectsPage() {
 
                 <p>
                     Desenvolvido juntamente com o <a href="https://www.linkedin.com/in/juanpabloruiz12/" target="_blank">
-                    <strong>Juan Pablo</strong></a> e a <a href="https://www.linkedin.com/in/natasha-lopes-125029249/" target="_blank">
-                    <strong>Natasha Lopes</strong></a> para a <strong>Global Solution do segundo semestre de 2024 da FIAP</strong>,
+                    <strong><u>Juan Pablo</u></strong></a> e a <a href="https://www.linkedin.com/in/natasha-lopes-125029249/" target="_blank">
+                    <strong><u>Natasha Lopes</u></strong></a> para a <strong>Global Solution do segundo semestre de 2024 da FIAP</strong>,
                     o projeto <strong>Solar Drive</strong> nasceu do desafio &quot;Energia para um Futuro Sustentável&quot;.
                     Este evento, realizado em parceria com empresas líderes em seus setores como <strong>SAP, FIA (Fórmula E),
                     Mahindra Racing, Ultragaz e Ultracargo</strong>, nos inspirou a criar uma solução inovadora para um dos maiores
@@ -129,6 +129,7 @@ export default function ProjectsPage() {
                 </p>
 
                 <p><strong><em>*Mais informações tecnicas no GitHub do projeto*</em></strong></p>
+                <p><strong><em>*click no nome dos pareceiros envolvidos para ir para seus perfis no Linkedin*</em></strong></p>
             </section>
         </main>
     );

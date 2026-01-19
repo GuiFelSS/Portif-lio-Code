@@ -71,7 +71,7 @@ export default function HeroSection() {
                                 Sobre
                         </a>
 
-                        <a href="/Guilherme_Felipe_da_Silva_Souza_CV.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/Guilherme_Felipe_da_Silva_Souza_CV_Full.pdf" target="_blank" rel="noopener noreferrer"
                             className={styles.CvButton}>
                                 Meu CV
                         </a>
