@@ -69,6 +69,7 @@
   box-shadow: 0 0 40px 4px var(--green);
   width: 100px;
   height: 100px;
+  background-color: rgba(0, 148, 0);
 }
 
 .profileImage:hover {
@@ -248,14 +249,13 @@
   font-weight: bold;
 }
 
-/* Responsividade */
 @media (max-width: 1200px) {
   .headerCertificados {
     position: static;
     width: 100vw;
     height: auto;
     flex-direction: row;
-    justify-content: space-between; /* Melhor alinhamento */
+    justify-content: space-between;
     align-items: center;
     padding: 20px 4vw;
     box-shadow: none;
