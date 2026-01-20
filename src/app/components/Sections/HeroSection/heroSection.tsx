@@ -21,7 +21,7 @@ export default function HeroSection() {
                 {/* Container da Imagem - Lado Esquerdo */}
                 <div className={styles.imageContainer}>
                     <Image
-                        src="/foto_perfil_teste.jpg"
+                        src="/foto_perfil.png"
                         alt="Foto de perfil - Guilherme Felipe"
                         width={150}
                         height={150}

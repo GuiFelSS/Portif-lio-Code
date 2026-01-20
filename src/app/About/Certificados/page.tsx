@@ -140,7 +140,7 @@ export default function CertificadosPage() {
 
                 <div className={styles.profileImageContainer}>
                     <Image
-                        src="/foto_perfil_teste.jpg"
+                        src="/foto_perfil.png"
                         alt="Foto de perfil - Guilherme Felipe"
                         width={150}
                         height={150}
